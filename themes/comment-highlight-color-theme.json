@@ -1,0 +1,26 @@
+{
+  "name": "Comment Highlight Theme",
+  "type": "dark",
+  "tokenColors": [
+    {
+      "scope": "comment.line.bold",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "comment.line.warning",
+      "settings": {
+        "foreground": "#ff0000",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "comment.line.question",
+      "settings": {
+        "foreground": "#ffff00",
+        "fontStyle": "bold"
+      }
+    }
+  ]
+}

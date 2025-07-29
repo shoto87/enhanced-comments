@@ -1,0 +1,33 @@
+{
+  "scopeName": "source.custom-comments",
+  "injectionSelector": "L:comment.line",
+  "patterns": [
+    {
+      "name": "comment.line.bold",
+      "match": "^\\s*//\\*.*$",
+      "captures": {
+        "0": {
+          "name": "comment.line.bold"
+        }
+      }
+    },
+    {
+      "name": "comment.line.warning",
+      "match": "^\\s*//!.*$",
+      "captures": {
+        "0": {
+          "name": "comment.line.warning"
+        }
+      }
+    },
+    {
+      "name": "comment.line.question",
+      "match": "^\\s*//\\?.*$",
+      "captures": {
+        "0": {
+          "name": "comment.line.question"
+        }
+      }
+    }
+  ]
+}

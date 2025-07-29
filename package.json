@@ -1,0 +1,59 @@
+{
+  "name": "custom-comment-highlighter",
+  "displayName": "Custom Comment Highlighter",
+  "description": "Highlights different comment styles with custom formatting",
+  "version": "0.1.0",
+  "publisher": "YOUR_PUBLISHER_NAME",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "source.custom-comments",
+        "path": "./syntaxes/comments.tmLanguage.json",
+        "injectTo": [
+          "source.js",
+          "source.ts",
+          "source.jsx",
+          "source.tsx",
+          "source.cpp",
+          "source.c",
+          "source.cs",
+          "source.java",
+          "source.go",
+          "source.php",
+          "source.python",
+          "source.ruby"
+        ]
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "commentBold",
+        "description": "Bold comment"
+      },
+      {
+        "id": "commentWarning",
+        "description": "Warning comment"
+      },
+      {
+        "id": "commentQuestion",
+        "description": "Question comment"
+      }
+    ],
+    "semanticTokenModifiers": [
+      "bold"
+    ],
+    "themes": [
+      {
+        "label": "Comment Highlighter",
+        "uiTheme": "vs-dark",
+        "path": "./themes/comment-highlight-color-theme.json"
+      }
+    ]
+  }
+}
