@@ -1,25 +1,43 @@
 {
-  "name": "Comment Highlight Theme",
+  "name": "Enhanced Comments",
   "type": "dark",
+  "colors": {},
   "tokenColors": [
     {
-      "scope": "comment.line.bold",
+      "scope": "comment.enhancer.bug",
       "settings": {
-        "fontStyle": "bold"
+        "foreground": "#FFD700"
       }
     },
     {
-      "scope": "comment.line.warning",
+      "scope": "comment.enhancer.error",
       "settings": {
-        "foreground": "#ff0000",
-        "fontStyle": "bold"
+        "foreground": "#FF4C4C"
       }
     },
     {
-      "scope": "comment.line.question",
+      "scope": "comment.enhancer.improve",
       "settings": {
-        "foreground": "#ffff00",
-        "fontStyle": "bold"
+        "foreground": "#4DA6FF"
+      }
+    },
+    {
+      "scope": "comment.enhancer.question",
+      "settings": {
+        "foreground": "#B266FF"
+      }
+    },
+    {
+      "scope": "comment.enhancer.highlight",
+      "settings": {
+        "foreground": "#33CC33"
+      }
+    },
+    {
+      "scope": "comment.enhancer.deprecated",
+      "settings": {
+        "foreground": "#888888",
+        "fontStyle": "italic"
       }
     }
   ]

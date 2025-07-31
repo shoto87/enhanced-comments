@@ -1,16 +1,23 @@
 {
-  "name": "custom-comment-highlighter",
-  "displayName": "Custom Comment Highlighter",
-  "description": "Highlights different comment styles with custom formatting",
-  "version": "0.1.0",
-  "publisher": "YOUR_PUBLISHER_NAME",
+  "name": "enhanced-comments",
+  "displayName": "enhanced-comments",
+  "description": "to highlight comments and make it more meaningful , more understandable",
+  "version": "0.0.1",
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.102.0"
   },
   "categories": [
     "Other"
   ],
+  "activationEvents": [],
+  "main": "./out/extension.ts",
   "contributes": {
+    "commands": [
+      {
+        "command": "enhanced-comments.helloWorld",
+        "title": "Hello World"
+      }
+    ],
     "grammars": [
       {
         "scopeName": "source.custom-comments",
@@ -31,29 +38,54 @@
         ]
       }
     ],
-    "semanticTokenTypes": [
-      {
-        "id": "commentBold",
-        "description": "Bold comment"
-      },
-      {
-        "id": "commentWarning",
-        "description": "Warning comment"
-      },
-      {
-        "id": "commentQuestion",
-        "description": "Question comment"
+    "semanticTokenColors": {
+      "rules": {
+        "comment.enhancer.bug": {
+          "foreground": "#FFD700"
+        },
+        "comment.enhancer.error": {
+          "foreground": "#FF4C4C"
+        },
+        "comment.enhancer.improve": {
+          "foreground": "#4DA6FF"
+        },
+        "comment.enhancer.question": {
+          "foreground": "#B266FF"
+        },
+        "comment.enhancer.highlight": {
+          "foreground": "#33CC33"
+        },
+        "comment.enhancer.deprecated": {
+          "foreground": "#888888",
+          "fontStyle": "italic"
+        }
       }
-    ],
-    "semanticTokenModifiers": [
-      "bold"
-    ],
+    },
     "themes": [
       {
-        "label": "Comment Highlighter",
+        "label": "Enhanced Comments",
         "uiTheme": "vs-dark",
         "path": "./themes/comment-highlight-color-theme.json"
       }
     ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.102.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
   }
 }

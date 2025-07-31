@@ -1,33 +1,41 @@
 {
-  "scopeName": "source.custom-comments",
-  "injectionSelector": "L:comment.line",
+  "scopeName": "source.js",
+  "injectionSelector": "L:source.js",
   "patterns": [
     {
-      "name": "comment.line.bold",
-      "match": "^\\s*//\\*.*$",
-      "captures": {
-        "0": {
-          "name": "comment.line.bold"
-        }
-      }
+      "begin": "//%",
+      "end": "$",
+      "name": "comment.enhancer.bug"
     },
     {
-      "name": "comment.line.warning",
-      "match": "^\\s*//!.*$",
-      "captures": {
-        "0": {
-          "name": "comment.line.warning"
-        }
-      }
+      "begin": "//!",
+      "end": "$",
+      "name": "comment.enhancer.error"
     },
     {
-      "name": "comment.line.question",
-      "match": "^\\s*//\\?.*$",
-      "captures": {
-        "0": {
-          "name": "comment.line.question"
-        }
-      }
+      "begin": "//\\+",
+      "end": "$",
+      "name": "comment.enhancer.improve"
+    },
+    {
+      "begin": "//\\?",
+      "end": "$",
+      "name": "comment.enhancer.question"
+    },
+    {
+      "begin": "//\\*",
+      "end": "$",
+      "name": "comment.enhancer.highlight"
+    },
+    {
+      "begin": "//~",
+      "end": "$",
+      "name": "comment.enhancer.deprecated"
+    },
+    {
+      "begin": "//",
+      "end": "$",
+      "name": "comment.line.double-slash"
     }
   ]
 }
