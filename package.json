@@ -1,5 +1,6 @@
 {
   "name": "enhanced-comments",
+  "publisher": "pratikkodape",
   "displayName": "enhanced-comments",
   "description": "to highlight comments and make it more meaningful , more understandable",
   "version": "0.0.1",
@@ -87,5 +88,9 @@
     "typescript": "^5.8.3",
     "@vscode/test-cli": "^0.0.11",
     "@vscode/test-electron": "^2.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shoto87/enhanced-comments.git"
   }
 }
