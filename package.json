@@ -1,9 +1,10 @@
 {
-  "name": "enhanced-comments",
+  "name": "markit",
   "publisher": "pratikkodape",
-  "displayName": "enhanced-comments",
+  "displayName": "markit",
   "description": "to highlight comments and make it more meaningful , more understandable",
-  "version": "0.0.1",
+  "version": "0.1.3",
+  "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.102.0"
   },
@@ -61,14 +62,7 @@
           "fontStyle": "italic"
         }
       }
-    },
-    "themes": [
-      {
-        "label": "Enhanced Comments",
-        "uiTheme": "vs-dark",
-        "path": "./themes/comment-highlight-color-theme.json"
-      }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
