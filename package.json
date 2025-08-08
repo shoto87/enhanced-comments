@@ -3,7 +3,7 @@
   "publisher": "pratikkodape",
   "displayName": "markit",
   "description": "Highlight comments and make them more meaningful, more understandable",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.102.0"
@@ -114,8 +114,7 @@
           {
             "scope": "comment.enhancer.highlight",
             "settings": {
-              "foreground": "#7aff6e",
-              "fontStyle": "bold"
+              "foreground": "#7aff6e"
             }
           },
           {
