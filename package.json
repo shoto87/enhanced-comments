@@ -2,8 +2,8 @@
   "name": "markit",
   "publisher": "pratikkodape",
   "displayName": "markit",
-  "description": "to highlight comments and make it more meaningful , more understandable",
-  "version": "0.1.3",
+  "description": "Highlight comments and make them more meaningful, more understandable",
+  "version": "0.1.6",
   "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.102.0"
@@ -11,7 +11,12 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:python",
+    "onLanguage:java"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -40,27 +45,87 @@
         ]
       }
     ],
-    "semanticTokenColors": {
-      "rules": {
-        "comment.enhancer.bug": {
+    "tokenColors": [
+      {
+        "scope": "comment.enhancer.bug",
+        "settings": {
           "foreground": "#FFD700"
-        },
-        "comment.enhancer.error": {
+        }
+      },
+      {
+        "scope": "comment.enhancer.error",
+        "settings": {
           "foreground": "#FF4C4C"
-        },
-        "comment.enhancer.improve": {
+        }
+      },
+      {
+        "scope": "comment.enhancer.improve",
+        "settings": {
           "foreground": "#4DA6FF"
-        },
-        "comment.enhancer.question": {
+        }
+      },
+      {
+        "scope": "comment.enhancer.question",
+        "settings": {
           "foreground": "#B266FF"
-        },
-        "comment.enhancer.highlight": {
+        }
+      },
+      {
+        "scope": "comment.enhancer.highlight",
+        "settings": {
           "foreground": "#33CC33"
-        },
-        "comment.enhancer.deprecated": {
+        }
+      },
+      {
+        "scope": "comment.enhancer.deprecated",
+        "settings": {
           "foreground": "#888888",
           "fontStyle": "italic"
         }
+      }
+    ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "comment.enhancer.bug",
+            "settings": {
+              "foreground": "#FF5555"
+            }
+          },
+          {
+            "scope": "comment.enhancer.error",
+            "settings": {
+              "foreground": "#FF8800"
+            }
+          },
+          {
+            "scope": "comment.enhancer.improve",
+            "settings": {
+              "foreground": "#00C7A9"
+            }
+          },
+          {
+            "scope": "comment.enhancer.question",
+            "settings": {
+              "foreground": "#5CC8FF"
+            }
+          },
+          {
+            "scope": "comment.enhancer.highlight",
+            "settings": {
+              "foreground": "#7aff6e",
+              "fontStyle": "bold"
+            }
+          },
+          {
+            "scope": "comment.enhancer.deprecated",
+            "settings": {
+              "foreground": "#A0A0A0",
+              "fontStyle": "italic"
+            }
+          }
+        ]
       }
     }
   },
