@@ -3,7 +3,7 @@
   "publisher": "pratikkodape",
   "displayName": "markit",
   "description": "Highlight comments and make them more meaningful, more understandable",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.102.0"
