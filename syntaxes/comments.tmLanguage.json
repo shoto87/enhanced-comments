@@ -1,41 +1,12 @@
 {
-  "scopeName": "source.js",
-  "injectionSelector": "L:source.js",
+  "scopeName": "source.custom-comments",
+  "injectionSelector": "L:source",
   "patterns": [
-    {
-      "begin": "//%",
-      "end": "$",
-      "name": "comment.enhancer.bug"
-    },
-    {
-      "begin": "//!",
-      "end": "$",
-      "name": "comment.enhancer.error"
-    },
-    {
-      "begin": "//\\+",
-      "end": "$",
-      "name": "comment.enhancer.improve"
-    },
-    {
-      "begin": "//\\?",
-      "end": "$",
-      "name": "comment.enhancer.question"
-    },
-    {
-      "begin": "//\\*",
-      "end": "$",
-      "name": "comment.enhancer.highlight"
-    },
-    {
-      "begin": "//~",
-      "end": "$",
-      "name": "comment.enhancer.deprecated"
-    },
-    {
-      "begin": "//",
-      "end": "$",
-      "name": "comment.line.double-slash"
-    }
+    { "begin": "//%", "end": "$", "name": "comment.enhancer.bug" },
+    { "begin": "//!", "end": "$", "name": "comment.enhancer.error" },
+    { "begin": "//\\+", "end": "$", "name": "comment.enhancer.improve" },
+    { "begin": "//\\?", "end": "$", "name": "comment.enhancer.question" },
+    { "begin": "//\\*", "end": "$", "name": "comment.enhancer.highlight" },
+    { "begin": "//~", "end": "$", "name": "comment.enhancer.deprecated" }
   ]
 }
